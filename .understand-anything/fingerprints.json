@@ -1,0 +1,1722 @@
+{
+  "version": "1.0.0",
+  "gitCommitHash": "3b4c573224a12093a017c9dfdb4854260fb954f0",
+  "generatedAt": "2026-06-07T18:55:25.490Z",
+  "files": {
+    ".understand-anything/.understandignore": {
+      "filePath": ".understand-anything/.understandignore",
+      "contentHash": "ab139a0a283e5d7ec901213c48624a121da73cac3504b211e7a421f8e8733680",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 31,
+      "hasStructuralAnalysis": false
+    },
+    "google_drive.py": {
+      "filePath": "google_drive.py",
+      "contentHash": "d41fea45114192348b8fdeecf579004b7abf4cf2729551fbc396fc63dbf139a3",
+      "functions": [
+        {
+          "name": "_format_google_drive_error",
+          "params": [
+            "payload"
+          ],
+          "returnType": "str",
+          "exported": true,
+          "lineCount": 17
+        },
+        {
+          "name": "_response_json",
+          "params": [
+            "response"
+          ],
+          "returnType": "dict",
+          "exported": true,
+          "lineCount": 6
+        },
+        {
+          "name": "_load_requests_module",
+          "params": [],
+          "exported": true,
+          "lineCount": 6
+        },
+        {
+          "name": "_load_json_file",
+          "params": [
+            "path",
+            "default"
+          ],
+          "exported": true,
+          "lineCount": 7
+        },
+        {
+          "name": "_save_json_file",
+          "params": [
+            "path",
+            "payload"
+          ],
+          "returnType": "None",
+          "exported": true,
+          "lineCount": 5
+        },
+        {
+          "name": "_set_owner_only_permissions",
+          "params": [
+            "path"
+          ],
+          "returnType": "None",
+          "exported": true,
+          "lineCount": 5
+        },
+        {
+          "name": "_load_or_create_encryption_key",
+          "params": [
+            "key_path"
+          ],
+          "returnType": "bytes",
+          "exported": true,
+          "lineCount": 13
+        },
+        {
+          "name": "_load_encrypted_token_payload",
+          "params": [
+            "token_path",
+            "key_path"
+          ],
+          "exported": true,
+          "lineCount": 15
+        },
+        {
+          "name": "load_google_drive_credentials",
+          "params": [
+            "credentials_path"
+          ],
+          "returnType": "dict",
+          "exported": true,
+          "lineCount": 7
+        },
+        {
+          "name": "save_google_drive_credentials",
+          "params": [
+            "credentials_path",
+            "payload"
+          ],
+          "returnType": "dict",
+          "exported": true,
+          "lineCount": 6
+        },
+        {
+          "name": "load_google_drive_token_state",
+          "params": [
+            "token_path",
+            "key_path"
+          ],
+          "returnType": "dict",
+          "exported": true,
+          "lineCount": 15
+        },
+        {
+          "name": "save_google_drive_token_state",
+          "params": [
+            "token_path",
+            "payload",
+            "key_path"
+          ],
+          "returnType": "dict",
+          "exported": true,
+          "lineCount": 13
+        },
+        {
+          "name": "clear_google_drive_token_state",
+          "params": [
+            "token_path",
+            "key_path"
+          ],
+          "returnType": "None",
+          "exported": true,
+          "lineCount": 6
+        },
+        {
+          "name": "build_google_drive_auth_status",
+          "params": [
+            "credentials_path",
+            "token_path",
+            "key_path"
+          ],
+          "returnType": "dict",
+          "exported": true,
+          "lineCount": 19
+        },
+        {
+          "name": "_build_code_verifier",
+          "params": [],
+          "returnType": "str",
+          "exported": true,
+          "lineCount": 2
+        },
+        {
+          "name": "_build_code_challenge",
+          "params": [
+            "code_verifier"
+          ],
+          "returnType": "str",
+          "exported": true,
+          "lineCount": 3
+        },
+        {
+          "name": "build_google_drive_auth_url",
+          "params": [
+            "credentials_path",
+            "token_path",
+            "key_path",
+            "redirect_uri"
+          ],
+          "returnType": "dict",
+          "exported": true,
+          "lineCount": 41
+        },
+        {
+          "name": "exchange_google_drive_auth_code",
+          "params": [
+            "credentials_path",
+            "token_path",
+            "key_path",
+            "code",
+            "state",
+            "requests_module"
+          ],
+          "returnType": "dict",
+          "exported": true,
+          "lineCount": 61
+        },
+        {
+          "name": "_token_is_expired",
+          "params": [
+            "token_state"
+          ],
+          "returnType": "bool",
+          "exported": true,
+          "lineCount": 9
+        },
+        {
+          "name": "ensure_google_drive_access_token",
+          "params": [
+            "credentials_path",
+            "token_path",
+            "key_path",
+            "requests_module"
+          ],
+          "returnType": "str",
+          "exported": true,
+          "lineCount": 48
+        },
+        {
+          "name": "disconnect_google_drive",
+          "params": [
+            "token_path",
+            "key_path",
+            "requests_module"
+          ],
+          "returnType": "dict",
+          "exported": true,
+          "lineCount": 19
+        },
+        {
+          "name": "upload_files_to_google_drive",
+          "params": [
+            "credentials_path",
+            "token_path",
+            "key_path",
+            "file_paths",
+            "folder_id",
+            "file_name_map",
+            "requests_module"
+          ],
+          "returnType": "dict",
+          "exported": true,
+          "lineCount": 54
+        },
+        {
+          "name": "ensure_google_drive_reports_folder",
+          "params": [
+            "credentials_path",
+            "token_path",
+            "key_path",
+            "requests_module",
+            "folder_name",
+            "parent_id"
+          ],
+          "returnType": "dict",
+          "exported": true,
+          "lineCount": 73
+        },
+        {
+          "name": "create_google_drive_folder",
+          "params": [
+            "name",
+            "parent_id",
+            "credentials_path",
+            "token_path",
+            "key_path",
+            "requests_module"
+          ],
+          "returnType": "dict",
+          "exported": true,
+          "lineCount": 40
+        },
+        {
+          "name": "_default_paths",
+          "params": [
+            "root"
+          ],
+          "returnType": "dict[str, Path]",
+          "exported": true,
+          "lineCount": 7
+        },
+        {
+          "name": "_print_json",
+          "params": [
+            "payload"
+          ],
+          "returnType": "None",
+          "exported": true,
+          "lineCount": 2
+        },
+        {
+          "name": "main",
+          "params": [],
+          "returnType": "int",
+          "exported": true,
+          "lineCount": 80
+        }
+      ],
+      "classes": [
+        {
+          "name": "_UrllibResponse",
+          "methods": [
+            "__init__",
+            "json"
+          ],
+          "properties": [],
+          "exported": true,
+          "lineCount": 7
+        },
+        {
+          "name": "_UrllibRequests",
+          "methods": [
+            "_request",
+            "get",
+            "post"
+          ],
+          "properties": [],
+          "exported": true,
+          "lineCount": 53
+        }
+      ],
+      "imports": [
+        {
+          "source": "base64",
+          "specifiers": [
+            "base64"
+          ]
+        },
+        {
+          "source": "hashlib",
+          "specifiers": [
+            "hashlib"
+          ]
+        },
+        {
+          "source": "json",
+          "specifiers": [
+            "json"
+          ]
+        },
+        {
+          "source": "os",
+          "specifiers": [
+            "os"
+          ]
+        },
+        {
+          "source": "secrets",
+          "specifiers": [
+            "secrets"
+          ]
+        },
+        {
+          "source": "datetime",
+          "specifiers": [
+            "datetime",
+            "timedelta",
+            "timezone"
+          ]
+        },
+        {
+          "source": "pathlib",
+          "specifiers": [
+            "Path"
+          ]
+        },
+        {
+          "source": "urllib.parse",
+          "specifiers": [
+            "urlencode"
+          ]
+        },
+        {
+          "source": "urllib.request",
+          "specifiers": [
+            "Request",
+            "urlopen"
+          ]
+        },
+        {
+          "source": "cryptography.fernet",
+          "specifiers": [
+            "Fernet",
+            "InvalidToken"
+          ]
+        }
+      ],
+      "exports": [
+        "_format_google_drive_error",
+        "_response_json",
+        "_UrllibResponse",
+        "_UrllibRequests",
+        "_load_requests_module",
+        "_load_json_file",
+        "_save_json_file",
+        "_set_owner_only_permissions",
+        "_load_or_create_encryption_key",
+        "_load_encrypted_token_payload",
+        "load_google_drive_credentials",
+        "save_google_drive_credentials",
+        "load_google_drive_token_state",
+        "save_google_drive_token_state",
+        "clear_google_drive_token_state",
+        "build_google_drive_auth_status",
+        "_build_code_verifier",
+        "_build_code_challenge",
+        "build_google_drive_auth_url",
+        "exchange_google_drive_auth_code",
+        "_token_is_expired",
+        "ensure_google_drive_access_token",
+        "disconnect_google_drive",
+        "upload_files_to_google_drive",
+        "ensure_google_drive_reports_folder",
+        "create_google_drive_folder",
+        "_default_paths",
+        "_print_json",
+        "main"
+      ],
+      "totalLines": 725,
+      "hasStructuralAnalysis": true
+    },
+    "index.html": {
+      "filePath": "index.html",
+      "contentHash": "5aa5060065c4411f38e630988bb17d411eebc3817bbd3f20ad51ab2e264d6dc2",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 1858,
+      "hasStructuralAnalysis": false
+    },
+    "install.sh": {
+      "filePath": "install.sh",
+      "contentHash": "2c4fe25b67edffe17133f10f36be637aa3c76efaeb10f97f8cc9410aab8f9581",
+      "functions": [
+        {
+          "name": "find_chrome",
+          "params": [],
+          "exported": false,
+          "lineCount": 20
+        },
+        {
+          "name": "find_gowitness",
+          "params": [],
+          "exported": false,
+          "lineCount": 25
+        }
+      ],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 220,
+      "hasStructuralAnalysis": true
+    },
+    "nmap-modern.xsl": {
+      "filePath": "nmap-modern.xsl",
+      "contentHash": "e1e43ecb50a9d747261c7650abc94d609183f92d038f89f3587373114735d1d3",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 2252,
+      "hasStructuralAnalysis": false
+    },
+    "nmap.sh": {
+      "filePath": "nmap.sh",
+      "contentHash": "3d20f7b335b21c0e4a41974b790827c4cb2c7ca69e74810bae9197298ff1e695",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 16,
+      "hasStructuralAnalysis": true
+    },
+    "package.json": {
+      "filePath": "package.json",
+      "contentHash": "c725eaa60b869909cdfce375d1e3a3b8da1a8b218141737f1da56f2fc4a737ad",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 18,
+      "hasStructuralAnalysis": true
+    },
+    "phase2_no_script.xml": {
+      "filePath": "phase2_no_script.xml",
+      "contentHash": "de7846635a3a2ad2511b3afe98b9966c62aece4741ecaf1d289729cb08cb42f2",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 1201,
+      "hasStructuralAnalysis": false
+    },
+    "phase2_vulners.xml": {
+      "filePath": "phase2_vulners.xml",
+      "contentHash": "e1bc7a96bfbaa59ab03e19b6a715df2097f561d9b719a407ff4a9d761ffb4a14",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 1991,
+      "hasStructuralAnalysis": false
+    },
+    "README.md": {
+      "filePath": "README.md",
+      "contentHash": "957670142510a09d5ab0a4b5e56130dee31b580c999741c61972cb319ab4b9ff",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 90,
+      "hasStructuralAnalysis": true
+    },
+    "scripts/ensure-dependencies.js": {
+      "filePath": "scripts/ensure-dependencies.js",
+      "contentHash": "ae993f8d64aec207a221578234556394e584f413a89b757ddc8212f8b25fc835",
+      "functions": [
+        {
+          "name": "readPackageJson",
+          "params": [],
+          "exported": false,
+          "lineCount": 8
+        },
+        {
+          "name": "missingDependencies",
+          "params": [
+            "packageJson"
+          ],
+          "exported": false,
+          "lineCount": 11
+        }
+      ],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 64,
+      "hasStructuralAnalysis": true
+    },
+    "server.js": {
+      "filePath": "server.js",
+      "contentHash": "e0bd782b2e3b5947f9d606644d6b20008a5db29ecd753389ba25604d15ec8a66",
+      "functions": [
+        {
+          "name": "loadJSON",
+          "params": [
+            "filePath"
+          ],
+          "exported": false,
+          "lineCount": 6
+        },
+        {
+          "name": "saveJSON",
+          "params": [
+            "filePath",
+            "data"
+          ],
+          "exported": false,
+          "lineCount": 3
+        },
+        {
+          "name": "saveCustomerProfileConfig",
+          "params": [
+            "profileConfig"
+          ],
+          "exported": false,
+          "lineCount": 7
+        },
+        {
+          "name": "saveGoogleDriveConfig",
+          "params": [
+            "googleDriveConfig"
+          ],
+          "exported": false,
+          "lineCount": 7
+        },
+        {
+          "name": "saveAutoScanConfig",
+          "params": [
+            "autoScanConfig"
+          ],
+          "exported": false,
+          "lineCount": 8
+        },
+        {
+          "name": "getGoogleDriveConfig",
+          "params": [],
+          "exported": false,
+          "lineCount": 3
+        },
+        {
+          "name": "isExecutable",
+          "params": [
+            "filePath"
+          ],
+          "exported": false,
+          "lineCount": 9
+        },
+        {
+          "name": "resolveExecutable",
+          "params": [
+            "explicitPath",
+            "candidates"
+          ],
+          "exported": false,
+          "lineCount": 12
+        },
+        {
+          "name": "expandUserPath",
+          "params": [
+            "filePath"
+          ],
+          "exported": false,
+          "lineCount": 6
+        },
+        {
+          "name": "getGoExecutableCandidates",
+          "params": [
+            "binaryName"
+          ],
+          "exported": false,
+          "lineCount": 12
+        },
+        {
+          "name": "getPrivilegedCommand",
+          "params": [
+            "executablePath",
+            "args"
+          ],
+          "exported": false,
+          "lineCount": 6
+        },
+        {
+          "name": "describeMissingExecutable",
+          "params": [
+            "name",
+            "envVar"
+          ],
+          "exported": false,
+          "lineCount": 3
+        },
+        {
+          "name": "getBrewCommand",
+          "params": [
+            "args"
+          ],
+          "exported": false,
+          "lineCount": 12
+        },
+        {
+          "name": "runBrewStep",
+          "params": [
+            "args"
+          ],
+          "exported": false,
+          "lineCount": 21
+        },
+        {
+          "name": "updateNmapFromHomebrew",
+          "params": [],
+          "exported": false,
+          "lineCount": 22
+        },
+        {
+          "name": "updateNmapScriptDatabase",
+          "params": [],
+          "exported": false,
+          "lineCount": 19
+        },
+        {
+          "name": "isSudoAuthFailure",
+          "params": [
+            "text"
+          ],
+          "exported": false,
+          "lineCount": 3
+        },
+        {
+          "name": "requestJSON",
+          "params": [
+            "url"
+          ],
+          "exported": false,
+          "lineCount": 20
+        },
+        {
+          "name": "getPortListenerPids",
+          "params": [
+            "port"
+          ],
+          "exported": false,
+          "lineCount": 11
+        },
+        {
+          "name": "stopExistingAppOnPort",
+          "params": [
+            "port"
+          ],
+          "exported": false,
+          "lineCount": 29
+        },
+        {
+          "name": "shellQuote",
+          "params": [
+            "value"
+          ],
+          "exported": false,
+          "lineCount": 3
+        },
+        {
+          "name": "escapeHtml",
+          "params": [
+            "value"
+          ],
+          "exported": false,
+          "lineCount": 9
+        },
+        {
+          "name": "getChromeExecutable",
+          "params": [],
+          "exported": false,
+          "lineCount": 11
+        },
+        {
+          "name": "createPdfExportHtml",
+          "params": [
+            "reportPath"
+          ],
+          "exported": false,
+          "lineCount": 31
+        },
+        {
+          "name": "generatePDF",
+          "params": [
+            "reportPath",
+            "pdfPath",
+            "callback"
+          ],
+          "exported": false,
+          "lineCount": 42
+        },
+        {
+          "name": "sanitizeReportSegment",
+          "params": [
+            "value"
+          ],
+          "exported": false,
+          "lineCount": 7
+        },
+        {
+          "name": "formatReportTimestamp",
+          "params": [],
+          "exported": false,
+          "lineCount": 12
+        },
+        {
+          "name": "formatReportDisplayTimestamp",
+          "params": [],
+          "exported": false,
+          "lineCount": 12
+        },
+        {
+          "name": "formatDriveDayFolder",
+          "params": [],
+          "exported": false,
+          "lineCount": 8
+        },
+        {
+          "name": "getDriveMetadataPath",
+          "params": [
+            "reportPath"
+          ],
+          "exported": false,
+          "lineCount": 3
+        },
+        {
+          "name": "saveDriveMetadata",
+          "params": [
+            "reportPath",
+            "result"
+          ],
+          "exported": false,
+          "lineCount": 16
+        },
+        {
+          "name": "loadDriveMetadata",
+          "params": [
+            "reportPath"
+          ],
+          "exported": false,
+          "lineCount": 5
+        },
+        {
+          "name": "findDriveLink",
+          "params": [
+            "metadata",
+            "fileName"
+          ],
+          "exported": false,
+          "lineCount": 3
+        },
+        {
+          "name": "getTopologyFingerprintParts",
+          "params": [],
+          "exported": false,
+          "lineCount": 13
+        },
+        {
+          "name": "getCustomerFingerprintProfile",
+          "params": [],
+          "exported": false,
+          "lineCount": 21
+        },
+        {
+          "name": "runGoogleDriveHelper",
+          "params": [
+            "args"
+          ],
+          "exported": false,
+          "lineCount": 21
+        },
+        {
+          "name": "getGoogleDriveRedirectUri",
+          "params": [],
+          "exported": false,
+          "lineCount": 3
+        },
+        {
+          "name": "uploadReportFilesToDrive",
+          "params": [
+            "socket",
+            "filePaths",
+            "profile"
+          ],
+          "exported": false,
+          "lineCount": 43
+        },
+        {
+          "name": "isCompleteNmapXML",
+          "params": [
+            "xmlPath"
+          ],
+          "exported": false,
+          "lineCount": 5
+        },
+        {
+          "name": "buildPhase2Args",
+          "params": [],
+          "exported": false,
+          "lineCount": 30
+        },
+        {
+          "name": "parseTargetInput",
+          "params": [
+            "target"
+          ],
+          "exported": false,
+          "lineCount": 6
+        },
+        {
+          "name": "formatTargetLabel",
+          "params": [
+            "targets"
+          ],
+          "exported": false,
+          "lineCount": 3
+        },
+        {
+          "name": "compactErrorText",
+          "params": [
+            "value"
+          ],
+          "exported": false,
+          "lineCount": 5
+        },
+        {
+          "name": "saveFailedScanHistory",
+          "params": [],
+          "exported": false,
+          "lineCount": 15
+        },
+        {
+          "name": "setupAutoScan",
+          "params": [
+            "config"
+          ],
+          "exported": false,
+          "lineCount": 25
+        },
+        {
+          "name": "logEvent",
+          "params": [
+            "socket",
+            "level",
+            "message"
+          ],
+          "exported": false,
+          "lineCount": 6
+        },
+        {
+          "name": "ipToInt",
+          "params": [
+            "ip"
+          ],
+          "exported": false,
+          "lineCount": 5
+        },
+        {
+          "name": "intToIp",
+          "params": [
+            "value"
+          ],
+          "exported": false,
+          "lineCount": 8
+        },
+        {
+          "name": "maskHexToInfo",
+          "params": [
+            "maskHex"
+          ],
+          "exported": false,
+          "lineCount": 9
+        },
+        {
+          "name": "getNetworkCidr",
+          "params": [
+            "localIP",
+            "maskHex"
+          ],
+          "exported": false,
+          "lineCount": 6
+        },
+        {
+          "name": "getNetworkInfo",
+          "params": [],
+          "exported": false,
+          "lineCount": 22
+        },
+        {
+          "name": "getPublicIP",
+          "params": [],
+          "exported": false,
+          "lineCount": 10
+        },
+        {
+          "name": "runTraceroute",
+          "params": [],
+          "exported": false,
+          "lineCount": 28
+        },
+        {
+          "name": "parseNmapXML",
+          "params": [
+            "xmlPath"
+          ],
+          "exported": false,
+          "lineCount": 89
+        },
+        {
+          "name": "getWebTargetsFromDiscoveredHosts",
+          "params": [],
+          "exported": false,
+          "lineCount": 32
+        },
+        {
+          "name": "listImageFiles",
+          "params": [
+            "dirPath"
+          ],
+          "exported": false,
+          "lineCount": 11
+        },
+        {
+          "name": "runGowitnessCommand",
+          "params": [
+            "args"
+          ],
+          "exported": false,
+          "lineCount": 7
+        },
+        {
+          "name": "captureGowitnessTarget",
+          "params": [
+            "target",
+            "screenshotDir",
+            "reportBaseName"
+          ],
+          "exported": false,
+          "lineCount": 21
+        },
+        {
+          "name": "captureGowitnessScreenshots",
+          "params": [
+            "socket",
+            "profile",
+            "reportBaseName"
+          ],
+          "exported": false,
+          "lineCount": 62
+        },
+        {
+          "name": "buildGowitnessReportSection",
+          "params": [
+            "screenshots"
+          ],
+          "exported": false,
+          "lineCount": 19
+        },
+        {
+          "name": "injectGowitnessReportSection",
+          "params": [
+            "reportPath",
+            "screenshots"
+          ],
+          "exported": false,
+          "lineCount": 25
+        },
+        {
+          "name": "generateReportFromXml",
+          "params": [
+            "socket",
+            "xmlPath",
+            "duration",
+            "reportScanKind"
+          ],
+          "exported": false,
+          "lineCount": 110
+        },
+        {
+          "name": "runNmapFallbackPass",
+          "params": [
+            "socket",
+            "args",
+            "phase",
+            "xmlFile",
+            "label"
+          ],
+          "exported": false,
+          "lineCount": 48
+        },
+        {
+          "name": "runPhase2Fallback",
+          "params": [
+            "socket",
+            "originalDuration",
+            "reportScanKind"
+          ],
+          "exported": false,
+          "lineCount": 50
+        },
+        {
+          "name": "runNmap",
+          "params": [
+            "socket",
+            "args"
+          ],
+          "exported": false,
+          "lineCount": 131
+        },
+        {
+          "name": "processHostBuffer",
+          "params": [
+            "ip",
+            "buffer"
+          ],
+          "exported": false,
+          "lineCount": 43
+        },
+        {
+          "name": "updateDiscoveredHost",
+          "params": [
+            "ip",
+            "data"
+          ],
+          "exported": false,
+          "lineCount": 10
+        },
+        {
+          "name": "getScanStats",
+          "params": [],
+          "exported": false,
+          "lineCount": 18
+        },
+        {
+          "name": "startChainedScan",
+          "params": [
+            "socket",
+            "target"
+          ],
+          "exported": false,
+          "lineCount": 51
+        },
+        {
+          "name": "listenWithPortGuard",
+          "params": [],
+          "exported": false,
+          "lineCount": 15
+        }
+      ],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 1718,
+      "hasStructuralAnalysis": true
+    },
+    "static/js/app_bootstrap.js": {
+      "filePath": "static/js/app_bootstrap.js",
+      "contentHash": "79efa1ffe0d485e5e9cc37e172c0720155f118565f9247ffda9e13819c338bae",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 67,
+      "hasStructuralAnalysis": true
+    },
+    "static/js/asset_details_modal.js": {
+      "filePath": "static/js/asset_details_modal.js",
+      "contentHash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 1,
+      "hasStructuralAnalysis": true
+    },
+    "static/js/auto_scan_ui.js": {
+      "filePath": "static/js/auto_scan_ui.js",
+      "contentHash": "0862e77d5bdbcba300e11c3ff9087cc618d484984ba5b662b176555ef67f35e0",
+      "functions": [
+        {
+          "name": "initializeAutoScanUI",
+          "params": [
+            "socket"
+          ],
+          "exported": false,
+          "lineCount": 28
+        },
+        {
+          "name": "saveAutoScanTimes",
+          "params": [],
+          "exported": false,
+          "lineCount": 8
+        },
+        {
+          "name": "saveAndRunScan",
+          "params": [],
+          "exported": false,
+          "lineCount": 5
+        },
+        {
+          "name": "hideAutoScanTimeModal",
+          "params": [],
+          "exported": false,
+          "lineCount": 4
+        }
+      ],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 49,
+      "hasStructuralAnalysis": true
+    },
+    "static/js/auto_update_banner.js": {
+      "filePath": "static/js/auto_update_banner.js",
+      "contentHash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 1,
+      "hasStructuralAnalysis": true
+    },
+    "static/js/customer_ui.js": {
+      "filePath": "static/js/customer_ui.js",
+      "contentHash": "352c0027700fd97b3868d4b32abcf82b3a573de21d77002aea1fa93f9eff8638",
+      "functions": [
+        {
+          "name": "setCustomerTabStatus",
+          "params": [
+            "message"
+          ],
+          "exported": false,
+          "lineCount": 15
+        },
+        {
+          "name": "loadLocalCustomers",
+          "params": [],
+          "exported": false,
+          "lineCount": 7
+        },
+        {
+          "name": "saveLocalCustomers",
+          "params": [
+            "customers"
+          ],
+          "exported": false,
+          "lineCount": 3
+        },
+        {
+          "name": "normalizeCustomerMatchValue",
+          "params": [
+            "value"
+          ],
+          "exported": false,
+          "lineCount": 3
+        },
+        {
+          "name": "getCurrentNetworkCustomerSignals",
+          "params": [],
+          "exported": false,
+          "lineCount": 14
+        },
+        {
+          "name": "customerMatchesCurrentNetwork",
+          "params": [
+            "customer",
+            "signals"
+          ],
+          "exported": false,
+          "lineCount": 9
+        },
+        {
+          "name": "syncCustomerSelectors",
+          "params": [],
+          "exported": false,
+          "lineCount": 34
+        },
+        {
+          "name": "escapeCustomerHTML",
+          "params": [
+            "value"
+          ],
+          "exported": false,
+          "lineCount": 9
+        },
+        {
+          "name": "renderCustomerFingerprint",
+          "params": [
+            "profile"
+          ],
+          "exported": false,
+          "lineCount": 16
+        },
+        {
+          "name": "renderCustomersTab",
+          "params": [],
+          "exported": false,
+          "lineCount": 27
+        },
+        {
+          "name": "loadCustomersTab",
+          "params": [],
+          "exported": false,
+          "lineCount": 4
+        },
+        {
+          "name": "showCustomerForm",
+          "params": [],
+          "exported": false,
+          "lineCount": 10
+        },
+        {
+          "name": "getSelectedCustomerProfilePrefix",
+          "params": [],
+          "exported": false,
+          "lineCount": 6
+        },
+        {
+          "name": "initializeCustomerUI",
+          "params": [],
+          "exported": false,
+          "lineCount": 27
+        }
+      ],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 207,
+      "hasStructuralAnalysis": true
+    },
+    "static/js/report_generation_ui.js": {
+      "filePath": "static/js/report_generation_ui.js",
+      "contentHash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 1,
+      "hasStructuralAnalysis": true
+    },
+    "static/js/report_status.js": {
+      "filePath": "static/js/report_status.js",
+      "contentHash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 1,
+      "hasStructuralAnalysis": true
+    },
+    "static/js/reports_tab.js": {
+      "filePath": "static/js/reports_tab.js",
+      "contentHash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 1,
+      "hasStructuralAnalysis": true
+    },
+    "static/js/scan_banners.js": {
+      "filePath": "static/js/scan_banners.js",
+      "contentHash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 1,
+      "hasStructuralAnalysis": true
+    },
+    "static/js/scan_runtime.js": {
+      "filePath": "static/js/scan_runtime.js",
+      "contentHash": "d7cf07ec6a7288ac83a7e6b17485c050d904594624cd4236c2cb0c0926538851",
+      "functions": [
+        {
+          "name": "isPrivateIP",
+          "params": [
+            "ip"
+          ],
+          "exported": false,
+          "lineCount": 7
+        },
+        {
+          "name": "setText",
+          "params": [
+            "id",
+            "value"
+          ],
+          "exported": false,
+          "lineCount": 4
+        },
+        {
+          "name": "formatDurationSeconds",
+          "params": [
+            "totalSeconds"
+          ],
+          "exported": false,
+          "lineCount": 7
+        },
+        {
+          "name": "formatReportTimestamp",
+          "params": [
+            "value"
+          ],
+          "exported": false,
+          "lineCount": 11
+        },
+        {
+          "name": "startPhaseTimer",
+          "params": [
+            "phase",
+            "startedAt"
+          ],
+          "exported": false,
+          "lineCount": 10
+        },
+        {
+          "name": "stopPhaseTimer",
+          "params": [
+            "phase",
+            "duration"
+          ],
+          "exported": false,
+          "lineCount": 9
+        },
+        {
+          "name": "getHighCVEList",
+          "params": [
+            "data"
+          ],
+          "exported": false,
+          "lineCount": 5
+        },
+        {
+          "name": "escapeHTML",
+          "params": [
+            "value"
+          ],
+          "exported": false,
+          "lineCount": 9
+        },
+        {
+          "name": "renderCVELink",
+          "params": [
+            "cveText"
+          ],
+          "exported": false,
+          "lineCount": 6
+        },
+        {
+          "name": "renderScreenshotCell",
+          "params": [
+            "data"
+          ],
+          "exported": false,
+          "lineCount": 14
+        },
+        {
+          "name": "openScreenshotPreview",
+          "params": [
+            "imageUrl",
+            "title"
+          ],
+          "exported": false,
+          "lineCount": 34
+        },
+        {
+          "name": "reportActionLink",
+          "params": [],
+          "exported": false,
+          "lineCount": 6
+        },
+        {
+          "name": "refreshLucideIcons",
+          "params": [],
+          "exported": false,
+          "lineCount": 3
+        },
+        {
+          "name": "getScanCustomerProfilePrefix",
+          "params": [],
+          "exported": false,
+          "lineCount": 6
+        },
+        {
+          "name": "getCVECountsFromRows",
+          "params": [],
+          "exported": false,
+          "lineCount": 7
+        },
+        {
+          "name": "updateCVESummaries",
+          "params": [],
+          "exported": false,
+          "lineCount": 11
+        },
+        {
+          "name": "getDiscoveryTableStats",
+          "params": [],
+          "exported": false,
+          "lineCount": 13
+        },
+        {
+          "name": "updateQuickScanStats",
+          "params": [],
+          "exported": false,
+          "lineCount": 3
+        },
+        {
+          "name": "updateDeepScanStats",
+          "params": [],
+          "exported": false,
+          "lineCount": 5
+        },
+        {
+          "name": "highlightActiveScanHost",
+          "params": [
+            "data"
+          ],
+          "exported": false,
+          "lineCount": 14
+        },
+        {
+          "name": "initializeScanRuntime",
+          "params": [
+            "socket"
+          ],
+          "exported": false,
+          "lineCount": 238
+        },
+        {
+          "name": "renderHop",
+          "params": [
+            "data"
+          ],
+          "exported": false,
+          "lineCount": 32
+        },
+        {
+          "name": "getScanButtonByKind",
+          "params": [
+            "kind"
+          ],
+          "exported": false,
+          "lineCount": 5
+        },
+        {
+          "name": "setScanUIActive",
+          "params": [
+            "phase"
+          ],
+          "exported": false,
+          "lineCount": 27
+        },
+        {
+          "name": "resetScanUI",
+          "params": [],
+          "exported": false,
+          "lineCount": 18
+        },
+        {
+          "name": "updateHostRow",
+          "params": [
+            "data"
+          ],
+          "exported": false,
+          "lineCount": 59
+        },
+        {
+          "name": "initializeDiscoveryUI",
+          "params": [
+            "socket"
+          ],
+          "exported": false,
+          "lineCount": 46
+        }
+      ],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 643,
+      "hasStructuralAnalysis": true
+    },
+    "static/js/settings_tab.js": {
+      "filePath": "static/js/settings_tab.js",
+      "contentHash": "9c671604d65ab53ce8a384507f4c492243cd248fbf9e2a7291c3217099d7b933",
+      "functions": [
+        {
+          "name": "setSettingsStatus",
+          "params": [
+            "message"
+          ],
+          "exported": false,
+          "lineCount": 15
+        },
+        {
+          "name": "getSettingsStorageKey",
+          "params": [],
+          "exported": false,
+          "lineCount": 3
+        },
+        {
+          "name": "escapeSettingsHTML",
+          "params": [
+            "value"
+          ],
+          "exported": false,
+          "lineCount": 9
+        },
+        {
+          "name": "collectSettingsForm",
+          "params": [],
+          "exported": false,
+          "lineCount": 17
+        },
+        {
+          "name": "applySettingsForm",
+          "params": [
+            "settings"
+          ],
+          "exported": false,
+          "lineCount": 16
+        },
+        {
+          "name": "setGoogleDriveStatus",
+          "params": [
+            "message"
+          ],
+          "exported": false,
+          "lineCount": 7
+        },
+        {
+          "name": "renderGoogleDriveSummary",
+          "params": [],
+          "exported": false,
+          "lineCount": 16
+        },
+        {
+          "name": "applyGoogleDriveConfig",
+          "params": [],
+          "exported": false,
+          "lineCount": 7
+        },
+        {
+          "name": "renderSettingsRuntimeSummary",
+          "params": [],
+          "exported": false,
+          "lineCount": 16
+        },
+        {
+          "name": "loadSettingsTab",
+          "params": [],
+          "exported": false,
+          "lineCount": 11
+        },
+        {
+          "name": "saveSettingsTab",
+          "params": [],
+          "exported": false,
+          "lineCount": 14
+        },
+        {
+          "name": "captureCurrentTarget",
+          "params": [],
+          "exported": false,
+          "lineCount": 6
+        },
+        {
+          "name": "addTargetProfile",
+          "params": [],
+          "exported": false,
+          "lineCount": 15
+        },
+        {
+          "name": "initializeSettingsTab",
+          "params": [
+            "socket"
+          ],
+          "exported": false,
+          "lineCount": 68
+        }
+      ],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 239,
+      "hasStructuralAnalysis": true
+    },
+    "static/js/site_chrome.js": {
+      "filePath": "static/js/site_chrome.js",
+      "contentHash": "df83ccbbda61a1f8a9cf505f81edb369d2d1d2a5f9ce9419348112559226c558",
+      "functions": [
+        {
+          "name": "initializeSiteChrome",
+          "params": [],
+          "exported": false,
+          "lineCount": 43
+        },
+        {
+          "name": "ensureTabPanelsAreSiblings",
+          "params": [],
+          "exported": false,
+          "lineCount": 12
+        },
+        {
+          "name": "setTabButtonState",
+          "params": [
+            "button",
+            "active"
+          ],
+          "exported": false,
+          "lineCount": 6
+        },
+        {
+          "name": "setTabStatus",
+          "params": [
+            "elementId",
+            "message"
+          ],
+          "exported": false,
+          "lineCount": 15
+        },
+        {
+          "name": "switchAppTab",
+          "params": [
+            "tab"
+          ],
+          "exported": false,
+          "lineCount": 29
+        },
+        {
+          "name": "initializeAuditLog",
+          "params": [],
+          "exported": false,
+          "lineCount": 68
+        },
+        {
+          "name": "toggleLogPanel",
+          "params": [],
+          "exported": false,
+          "lineCount": 4
+        },
+        {
+          "name": "initializeLayoutRuntime",
+          "params": [],
+          "exported": false,
+          "lineCount": 4
+        }
+      ],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 191,
+      "hasStructuralAnalysis": true
+    },
+    "static/js/table_sorter.js": {
+      "filePath": "static/js/table_sorter.js",
+      "contentHash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 1,
+      "hasStructuralAnalysis": true
+    },
+    "static/js/update_modal.js": {
+      "filePath": "static/js/update_modal.js",
+      "contentHash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 1,
+      "hasStructuralAnalysis": true
+    }
+  }
+}

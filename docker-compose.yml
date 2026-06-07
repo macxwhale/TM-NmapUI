@@ -1,0 +1,22 @@
+version: '3.8'
+
+services:
+  nmap-ui:
+    build: .
+    container_name: nmap-ui
+    # Host networking is required for Nmap to have full access to the host's network interfaces
+    # for ARP discovery, OS detection, and other low-level features.
+    network_mode: host
+    # Privileged mode is required for Nmap to perform raw socket operations.
+    privileged: true
+    volumes:
+      - .:/app
+      # Use an anonymous volume for node_modules to ensure container-specific 
+      # dependencies don't conflict with host node_modules, while still allowing
+      # the rest of the app to be mounted from the host for easy syncing/updates.
+      - /app/node_modules
+    environment:
+      - NODE_ENV=production
+      - CHROME_PATH=/usr/bin/chromium
+      - GOWITNESS_PATH=/root/go/bin/gowitness
+    restart: unless-stopped

@@ -1,0 +1,1285 @@
+{
+  "version": "1.0.0",
+  "project": {
+    "name": "gemini-nmap",
+    "languages": [
+      "javascript",
+      "python",
+      "html",
+      "shell",
+      "xml",
+      "json",
+      "markdown"
+    ],
+    "frameworks": [
+      "express"
+    ],
+    "description": "Nmap Network Scanner GUI",
+    "analyzedAt": "2026-06-07T18:53:34.721Z",
+    "gitCommitHash": "3b4c573224a12093a017c9dfdb4854260fb954f0"
+  },
+  "nodes": [
+    {
+      "id": "document:README.md",
+      "type": "document",
+      "name": "README.md",
+      "filePath": "README.md",
+      "summary": "Main project documentation for TM-NmapUI, a modern GUI for the Nmap network scanner.",
+      "tags": [
+        "documentation",
+        "entry-point",
+        "overview"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:index.html",
+      "type": "file",
+      "name": "index.html",
+      "filePath": "index.html",
+      "summary": "Main user interface for the Nmap scanner, providing the single-page application structure.",
+      "tags": [
+        "markup",
+        "ui",
+        "frontend"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:install.sh",
+      "type": "file",
+      "name": "install.sh",
+      "filePath": "install.sh",
+      "summary": "Installation script that handles dependency checks and setup for tools like Chrome and gowitness.",
+      "tags": [
+        "script",
+        "installation",
+        "deployment"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:install.sh:find_chrome",
+      "type": "function",
+      "name": "find_chrome",
+      "filePath": "install.sh",
+      "lineRange": [
+        23,
+        42
+      ],
+      "summary": "Helper function to locate the Google Chrome binary on the system.",
+      "tags": [
+        "utility",
+        "shell-function",
+        "discovery"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:install.sh:find_gowitness",
+      "type": "function",
+      "name": "find_gowitness",
+      "filePath": "install.sh",
+      "lineRange": [
+        96,
+        120
+      ],
+      "summary": "Helper function to locate the gowitness binary on the system.",
+      "tags": [
+        "utility",
+        "shell-function",
+        "discovery"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "config:nmap-modern.xsl",
+      "type": "config",
+      "name": "nmap-modern.xsl",
+      "filePath": "nmap-modern.xsl",
+      "summary": "XSL stylesheet used to transform Nmap XML output into a modern, readable HTML report.",
+      "tags": [
+        "configuration",
+        "nmap",
+        "reporting"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:nmap.sh",
+      "type": "file",
+      "name": "nmap.sh",
+      "filePath": "nmap.sh",
+      "summary": "Simple shell script to execute Nmap scans.",
+      "tags": [
+        "script",
+        "nmap",
+        "scan"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "config:package.json",
+      "type": "config",
+      "name": "package.json",
+      "filePath": "package.json",
+      "summary": "Node.js project configuration file defining metadata, scripts, and dependencies.",
+      "tags": [
+        "configuration",
+        "javascript",
+        "build-system"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "config:phase2_no_script.xml",
+      "type": "config",
+      "name": "phase2_no_script.xml",
+      "filePath": "phase2_no_script.xml",
+      "summary": "Nmap XML output file containing scan results without script data.",
+      "tags": [
+        "configuration",
+        "nmap",
+        "data"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "config:phase2_vulners.xml",
+      "type": "config",
+      "name": "phase2_vulners.xml",
+      "filePath": "phase2_vulners.xml",
+      "summary": "Nmap XML output file containing scan results with vulnerability information.",
+      "tags": [
+        "configuration",
+        "nmap",
+        "security"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "config:.understand-anything/.understandignore",
+      "type": "config",
+      "name": ".understandignore",
+      "filePath": ".understand-anything/.understandignore",
+      "summary": "Configuration file defining patterns to exclude from codebase analysis, based on .gitignore defaults.",
+      "tags": [
+        "configuration",
+        "analysis",
+        "filtering"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:google_drive.py",
+      "type": "file",
+      "name": "google_drive.py",
+      "filePath": "google_drive.py",
+      "summary": "Helper script for Google Drive integration, handling OAuth2 authentication, token management, and file/folder operations.",
+      "tags": [
+        "utility",
+        "integration",
+        "google-drive",
+        "python"
+      ],
+      "complexity": "complex",
+      "languageNotes": "Uses urllib for requests to avoid external dependencies, includes encrypted token storage."
+    },
+    {
+      "id": "function:google_drive.py:load_google_drive_credentials",
+      "type": "function",
+      "name": "load_google_drive_credentials",
+      "filePath": "google_drive.py",
+      "summary": "Loads client credentials from a JSON file for Google Drive API access.",
+      "tags": [
+        "authentication",
+        "credentials",
+        "io"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:google_drive.py:build_google_drive_auth_url",
+      "type": "function",
+      "name": "build_google_drive_auth_url",
+      "filePath": "google_drive.py",
+      "summary": "Generates the OAuth2 authorization URL with PKCE challenge for user login.",
+      "tags": [
+        "authentication",
+        "oauth2",
+        "pkce"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:google_drive.py:exchange_google_drive_auth_code",
+      "type": "function",
+      "name": "exchange_google_drive_auth_code",
+      "filePath": "google_drive.py",
+      "summary": "Exchanges an authorization code for access and refresh tokens.",
+      "tags": [
+        "authentication",
+        "oauth2",
+        "token-exchange"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:google_drive.py:ensure_google_drive_access_token",
+      "type": "function",
+      "name": "ensure_google_drive_access_token",
+      "filePath": "google_drive.py",
+      "summary": "Checks token expiration and refreshes the access token if necessary.",
+      "tags": [
+        "authentication",
+        "token-management"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:google_drive.py:upload_files_to_google_drive",
+      "type": "function",
+      "name": "upload_files_to_google_drive",
+      "filePath": "google_drive.py",
+      "summary": "Uploads multiple files to a specific Google Drive folder with metadata.",
+      "tags": [
+        "io",
+        "google-drive",
+        "upload"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:google_drive.py:ensure_google_drive_reports_folder",
+      "type": "function",
+      "name": "ensure_google_drive_reports_folder",
+      "filePath": "google_drive.py",
+      "summary": "Ensures a specific reports folder exists on Google Drive, creating it if missing.",
+      "tags": [
+        "google-drive",
+        "folder-management"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "class:google_drive.py:_UrllibRequests",
+      "type": "class",
+      "name": "_UrllibRequests",
+      "filePath": "google_drive.py",
+      "summary": "Minimal internal implementation of requests-like API using urllib for HTTP calls.",
+      "tags": [
+        "network",
+        "http",
+        "wrapper"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:scripts/ensure-dependencies.js",
+      "type": "file",
+      "name": "ensure-dependencies.js",
+      "filePath": "scripts/ensure-dependencies.js",
+      "summary": "Pre-run script that validates if all required Node.js dependencies are installed.",
+      "tags": [
+        "utility",
+        "setup",
+        "dependencies"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:scripts/ensure-dependencies.js:missingDependencies",
+      "type": "function",
+      "name": "missingDependencies",
+      "filePath": "scripts/ensure-dependencies.js",
+      "summary": "Identifies packages listed in package.json that cannot be resolved in the current environment.",
+      "tags": [
+        "validation",
+        "dependencies"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:server.js",
+      "type": "file",
+      "name": "server.js",
+      "filePath": "server.js",
+      "summary": "Main backend server handling Nmap orchestration, report generation (PDF/HTML), and real-time Socket.IO communication.",
+      "tags": [
+        "entry-point",
+        "server",
+        "nmap",
+        "backend"
+      ],
+      "complexity": "complex",
+      "languageNotes": "Uses child_process for Nmap and Gowitness, integrates with Google Drive via Python helper."
+    },
+    {
+      "id": "function:server.js:updateNmapScriptDatabase",
+      "type": "function",
+      "name": "updateNmapScriptDatabase",
+      "filePath": "server.js",
+      "summary": "Executes 'nmap --script-updatedb' with elevated privileges to refresh the script database.",
+      "tags": [
+        "nmap",
+        "maintenance",
+        "sudo"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:server.js:generatePDF",
+      "type": "function",
+      "name": "generatePDF",
+      "filePath": "server.js",
+      "summary": "Generates a PDF version of the Nmap report using headless Chrome or wkhtmltopdf.",
+      "tags": [
+        "reporting",
+        "pdf",
+        "chrome"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:server.js:uploadReportFilesToDrive",
+      "type": "function",
+      "name": "uploadReportFilesToDrive",
+      "filePath": "server.js",
+      "summary": "Orchestrates the upload of HTML and PDF reports to Google Drive via the Python helper.",
+      "tags": [
+        "reporting",
+        "google-drive",
+        "integration"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:server.js:runTraceroute",
+      "type": "function",
+      "name": "runTraceroute",
+      "filePath": "server.js",
+      "summary": "Executes a traceroute scan and emits real-time hop updates to the connected socket.",
+      "tags": [
+        "nmap",
+        "network",
+        "real-time"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:server.js:parseNmapXML",
+      "type": "function",
+      "name": "parseNmapXML",
+      "filePath": "server.js",
+      "summary": "Parses Nmap XML output to extract discovered hosts, ports, versions, and CVE vulnerabilities.",
+      "tags": [
+        "nmap",
+        "parsing",
+        "vulnerabilities"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:server.js:captureGowitnessScreenshots",
+      "type": "function",
+      "name": "captureGowitnessScreenshots",
+      "filePath": "server.js",
+      "summary": "Uses Gowitness to capture screenshots of discovered web services for the final report.",
+      "tags": [
+        "reconnaissance",
+        "screenshots",
+        "gowitness"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:server.js:generateReportFromXml",
+      "type": "function",
+      "name": "generateReportFromXml",
+      "filePath": "server.js",
+      "summary": "Transforms Nmap XML into a modern HTML report using XSLT, including screenshots and metadata.",
+      "tags": [
+        "reporting",
+        "xslt",
+        "html"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:server.js:runNmap",
+      "type": "function",
+      "name": "runNmap",
+      "filePath": "server.js",
+      "summary": "Executes the main Nmap process, handles fallback passes, and manages real-time result streaming.",
+      "tags": [
+        "nmap",
+        "scanning",
+        "orchestration"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:server.js:startChainedScan",
+      "type": "function",
+      "name": "startChainedScan",
+      "filePath": "server.js",
+      "summary": "Initiates a full scan sequence (Quick Scan followed by Deep Scan) for a given target.",
+      "tags": [
+        "nmap",
+        "scanning",
+        "workflow"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:static/js/app_bootstrap.js",
+      "type": "file",
+      "name": "app_bootstrap.js",
+      "filePath": "static/js/app_bootstrap.js",
+      "summary": "Frontend initialization script that sets up Socket.IO and boots UI components.",
+      "tags": [
+        "entry-point",
+        "frontend",
+        "socket-io"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:static/js/auto_scan_ui.js",
+      "type": "file",
+      "name": "auto_scan_ui.js",
+      "filePath": "static/js/auto_scan_ui.js",
+      "summary": "Frontend logic for managing automated, scheduled scans and their configuration modal.",
+      "tags": [
+        "frontend",
+        "ui",
+        "automation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:static/js/auto_scan_ui.js:initializeAutoScanUI",
+      "type": "function",
+      "name": "initializeAutoScanUI",
+      "filePath": "static/js/auto_scan_ui.js",
+      "summary": "Sets up event listeners and initial state for the auto-scan UI components.",
+      "tags": [
+        "initialization",
+        "ui"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:static/js/customer_ui.js",
+      "type": "file",
+      "name": "customer_ui.js",
+      "filePath": "static/js/customer_ui.js",
+      "summary": "Handles customer profile management, network fingerprint matching, and profile selectors.",
+      "tags": [
+        "frontend",
+        "ui",
+        "customer-management"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:static/js/customer_ui.js:syncCustomerSelectors",
+      "type": "function",
+      "name": "syncCustomerSelectors",
+      "filePath": "static/js/customer_ui.js",
+      "summary": "Synchronizes customer dropdowns across the UI and attempts to auto-match the current network.",
+      "tags": [
+        "ui",
+        "synchronization"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:static/js/customer_ui.js:initializeCustomerUI",
+      "type": "function",
+      "name": "initializeCustomerUI",
+      "filePath": "static/js/customer_ui.js",
+      "summary": "Initializes the customers tab and global customer management logic.",
+      "tags": [
+        "initialization",
+        "ui"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:static/js/scan_runtime.js",
+      "type": "file",
+      "name": "scan_runtime.js",
+      "filePath": "static/js/scan_runtime.js",
+      "summary": "Core frontend engine for real-time scan visualization, host discovery table updates, and traceroute rendering.",
+      "tags": [
+        "frontend",
+        "real-time",
+        "scanning"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:static/js/scan_runtime.js:initializeScanRuntime",
+      "type": "function",
+      "name": "initializeScanRuntime",
+      "filePath": "static/js/scan_runtime.js",
+      "summary": "Connects socket events to UI updates for scan progress, host discovery, and traceroute.",
+      "tags": [
+        "initialization",
+        "real-time",
+        "socket-io"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:static/js/scan_runtime.js:updateHostRow",
+      "type": "function",
+      "name": "updateHostRow",
+      "filePath": "static/js/scan_runtime.js",
+      "summary": "Surgically updates or creates a row in the discovery table for a specific host.",
+      "tags": [
+        "ui",
+        "dom-manipulation",
+        "rendering"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:static/js/scan_runtime.js:initializeDiscoveryUI",
+      "type": "function",
+      "name": "initializeDiscoveryUI",
+      "filePath": "static/js/scan_runtime.js",
+      "summary": "Sets up scan control buttons (Start/Stop/Dragnet) and their socket triggers.",
+      "tags": [
+        "initialization",
+        "ui",
+        "scanning"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:static/js/settings_tab.js",
+      "type": "file",
+      "name": "settings_tab.js",
+      "filePath": "static/js/settings_tab.js",
+      "summary": "Manages application settings, including Nmap configuration and Google Drive integration status.",
+      "tags": [
+        "frontend",
+        "ui",
+        "settings"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:static/js/settings_tab.js:initializeSettingsTab",
+      "type": "function",
+      "name": "initializeSettingsTab",
+      "filePath": "static/js/settings_tab.js",
+      "summary": "Initializes settings form logic and Google Drive authentication status checks.",
+      "tags": [
+        "initialization",
+        "ui",
+        "google-drive"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:static/js/site_chrome.js",
+      "type": "file",
+      "name": "site_chrome.js",
+      "filePath": "static/js/site_chrome.js",
+      "summary": "Controls global layout behaviors, tab switching, and the persistent audit log panel.",
+      "tags": [
+        "frontend",
+        "ui",
+        "layout"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:static/js/site_chrome.js:initializeSiteChrome",
+      "type": "function",
+      "name": "initializeSiteChrome",
+      "filePath": "static/js/site_chrome.js",
+      "summary": "Sets up global UI elements, timers, and the main tab switching system.",
+      "tags": [
+        "initialization",
+        "ui",
+        "navigation"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:static/js/site_chrome.js:initializeAuditLog",
+      "type": "function",
+      "name": "initializeAuditLog",
+      "filePath": "static/js/site_chrome.js",
+      "summary": "Initializes the real-time event log viewer with level filtering and export functionality.",
+      "tags": [
+        "logging",
+        "ui",
+        "real-time"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:static/js/asset_details_modal.js",
+      "type": "file",
+      "name": "asset_details_modal.js",
+      "filePath": "static/js/asset_details_modal.js",
+      "summary": "Frontend component for displaying detailed asset information (Placeholder).",
+      "tags": [
+        "frontend",
+        "ui",
+        "placeholder"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:static/js/auto_update_banner.js",
+      "type": "file",
+      "name": "auto_update_banner.js",
+      "filePath": "static/js/auto_update_banner.js",
+      "summary": "Frontend component for the automatic update notification banner (Placeholder).",
+      "tags": [
+        "frontend",
+        "ui",
+        "placeholder"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:static/js/report_generation_ui.js",
+      "type": "file",
+      "name": "report_generation_ui.js",
+      "filePath": "static/js/report_generation_ui.js",
+      "summary": "Frontend logic for report generation status and triggers (Placeholder).",
+      "tags": [
+        "frontend",
+        "ui",
+        "placeholder"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:static/js/report_status.js",
+      "type": "file",
+      "name": "report_status.js",
+      "filePath": "static/js/report_status.js",
+      "summary": "Frontend utility for tracking and displaying report creation progress (Placeholder).",
+      "tags": [
+        "frontend",
+        "ui",
+        "placeholder"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:static/js/reports_tab.js",
+      "type": "file",
+      "name": "reports_tab.js",
+      "filePath": "static/js/reports_tab.js",
+      "summary": "Frontend logic for the reports archive management tab (Placeholder).",
+      "tags": [
+        "frontend",
+        "ui",
+        "placeholder"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:static/js/scan_banners.js",
+      "type": "file",
+      "name": "scan_banners.js",
+      "filePath": "static/js/scan_banners.js",
+      "summary": "Frontend logic for scan status and warning banners (Placeholder).",
+      "tags": [
+        "frontend",
+        "ui",
+        "placeholder"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:static/js/table_sorter.js",
+      "type": "file",
+      "name": "table_sorter.js",
+      "filePath": "static/js/table_sorter.js",
+      "summary": "Frontend utility for sorting discovery tables (Placeholder).",
+      "tags": [
+        "frontend",
+        "utility",
+        "placeholder"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:static/js/update_modal.js",
+      "type": "file",
+      "name": "update_modal.js",
+      "filePath": "static/js/update_modal.js",
+      "summary": "Frontend logic for the manual update flow modal (Placeholder).",
+      "tags": [
+        "frontend",
+        "ui",
+        "placeholder"
+      ],
+      "complexity": "simple"
+    }
+  ],
+  "edges": [
+    {
+      "source": "document:README.md",
+      "target": "file:index.html",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:README.md",
+      "target": "file:install.sh",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:install.sh",
+      "target": "function:install.sh:find_chrome",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:install.sh",
+      "target": "function:install.sh:find_gowitness",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "config:package.json",
+      "target": "file:server.js",
+      "type": "configures",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "config:nmap-modern.xsl",
+      "target": "file:index.html",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:nmap.sh",
+      "target": "config:phase2_no_script.xml",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:nmap.sh",
+      "target": "config:phase2_vulners.xml",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:google_drive.py",
+      "target": "function:google_drive.py:load_google_drive_credentials",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:google_drive.py",
+      "target": "function:google_drive.py:build_google_drive_auth_url",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:google_drive.py",
+      "target": "function:google_drive.py:exchange_google_drive_auth_code",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:google_drive.py",
+      "target": "function:google_drive.py:ensure_google_drive_access_token",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:google_drive.py",
+      "target": "function:google_drive.py:upload_files_to_google_drive",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:google_drive.py",
+      "target": "function:google_drive.py:ensure_google_drive_reports_folder",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:google_drive.py",
+      "target": "class:google_drive.py:_UrllibRequests",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:scripts/ensure-dependencies.js",
+      "target": "function:scripts/ensure-dependencies.js:missingDependencies",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:server.js",
+      "target": "function:server.js:updateNmapScriptDatabase",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:server.js",
+      "target": "function:server.js:generatePDF",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:server.js",
+      "target": "function:server.js:uploadReportFilesToDrive",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:server.js",
+      "target": "function:server.js:runTraceroute",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:server.js",
+      "target": "function:server.js:parseNmapXML",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:server.js",
+      "target": "function:server.js:captureGowitnessScreenshots",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:server.js",
+      "target": "function:server.js:generateReportFromXml",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:server.js",
+      "target": "function:server.js:runNmap",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:server.js",
+      "target": "function:server.js:startChainedScan",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:static/js/auto_scan_ui.js",
+      "target": "function:static/js/auto_scan_ui.js:initializeAutoScanUI",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:static/js/customer_ui.js",
+      "target": "function:static/js/customer_ui.js:syncCustomerSelectors",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:static/js/customer_ui.js",
+      "target": "function:static/js/customer_ui.js:initializeCustomerUI",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:static/js/scan_runtime.js",
+      "target": "function:static/js/scan_runtime.js:initializeScanRuntime",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:static/js/scan_runtime.js",
+      "target": "function:static/js/scan_runtime.js:updateHostRow",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:static/js/scan_runtime.js",
+      "target": "function:static/js/scan_runtime.js:initializeDiscoveryUI",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:static/js/settings_tab.js",
+      "target": "function:static/js/settings_tab.js:initializeSettingsTab",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:static/js/site_chrome.js",
+      "target": "function:static/js/site_chrome.js:initializeSiteChrome",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:static/js/site_chrome.js",
+      "target": "function:static/js/site_chrome.js:initializeAuditLog",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:server.js",
+      "target": "file:google_drive.py",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "function:server.js:uploadReportFilesToDrive",
+      "target": "file:google_drive.py",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:server.js:runNmap",
+      "target": "function:server.js:parseNmapXML",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:server.js:runNmap",
+      "target": "function:server.js:generateReportFromXml",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:server.js:startChainedScan",
+      "target": "function:server.js:runNmap",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:static/js/scan_runtime.js:initializeScanRuntime",
+      "target": "function:static/js/customer_ui.js:initializeCustomerUI",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:static/js/site_chrome.js:initializeSiteChrome",
+      "target": "function:static/js/customer_ui.js:initializeCustomerUI",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:static/js/site_chrome.js:initializeSiteChrome",
+      "target": "function:static/js/settings_tab.js:initializeSettingsTab",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:index.html",
+      "target": "file:static/js/app_bootstrap.js",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:index.html",
+      "target": "file:static/js/auto_scan_ui.js",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:index.html",
+      "target": "file:static/js/customer_ui.js",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:index.html",
+      "target": "file:static/js/scan_runtime.js",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:index.html",
+      "target": "file:static/js/settings_tab.js",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:index.html",
+      "target": "file:static/js/site_chrome.js",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:index.html",
+      "target": "file:static/js/asset_details_modal.js",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:index.html",
+      "target": "file:static/js/auto_update_banner.js",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:index.html",
+      "target": "file:static/js/report_generation_ui.js",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:index.html",
+      "target": "file:static/js/report_status.js",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:index.html",
+      "target": "file:static/js/reports_tab.js",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:index.html",
+      "target": "file:static/js/scan_banners.js",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:index.html",
+      "target": "file:static/js/table_sorter.js",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:index.html",
+      "target": "file:static/js/update_modal.js",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:server.js",
+      "target": "config:nmap-modern.xsl",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "config:package.json",
+      "target": "file:scripts/ensure-dependencies.js",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.8
+    }
+  ],
+  "layers": [
+    {
+      "id": "layer:presentation",
+      "name": "Presentation",
+      "description": "Frontend user interface components and client-side logic.",
+      "nodeIds": [
+        "file:index.html",
+        "file:static/js/app_bootstrap.js",
+        "file:static/js/auto_scan_ui.js",
+        "file:static/js/customer_ui.js",
+        "file:static/js/scan_runtime.js",
+        "file:static/js/settings_tab.js",
+        "file:static/js/site_chrome.js",
+        "file:static/js/asset_details_modal.js",
+        "file:static/js/auto_update_banner.js",
+        "file:static/js/report_generation_ui.js",
+        "file:static/js/report_status.js",
+        "file:static/js/reports_tab.js",
+        "file:static/js/scan_banners.js",
+        "file:static/js/table_sorter.js",
+        "file:static/js/update_modal.js"
+      ]
+    },
+    {
+      "id": "layer:server",
+      "name": "Server",
+      "description": "Main backend application server and API endpoints.",
+      "nodeIds": [
+        "file:server.js"
+      ]
+    },
+    {
+      "id": "layer:domain-logic",
+      "name": "Domain Logic",
+      "description": "Core Nmap orchestration, parsing, and report generation logic.",
+      "nodeIds": [
+        "function:server.js:runNmap",
+        "function:server.js:parseNmapXML",
+        "function:server.js:generateReportFromXml",
+        "function:server.js:startChainedScan",
+        "function:server.js:runTraceroute",
+        "function:server.js:generatePDF",
+        "config:nmap-modern.xsl",
+        "config:phase2_no_script.xml",
+        "config:phase2_vulners.xml"
+      ]
+    },
+    {
+      "id": "layer:integrations",
+      "name": "Integrations",
+      "description": "External service connectors and system tool wrappers.",
+      "nodeIds": [
+        "file:google_drive.py",
+        "function:server.js:uploadReportFilesToDrive",
+        "function:server.js:captureGowitnessScreenshots",
+        "file:nmap.sh",
+        "function:server.js:updateNmapScriptDatabase"
+      ]
+    },
+    {
+      "id": "layer:infrastructure",
+      "name": "Infrastructure",
+      "description": "Installation scripts, dependency management, and project configuration.",
+      "nodeIds": [
+        "file:install.sh",
+        "file:scripts/ensure-dependencies.js",
+        "config:package.json",
+        "config:.understand-anything/.understandignore",
+        "document:README.md"
+      ]
+    }
+  ],
+  "tour": [
+    {
+      "order": 1,
+      "title": "Welcome to TM-NmapUI",
+      "description": "Start here for project overview and documentation.",
+      "nodeIds": [
+        "document:README.md"
+      ]
+    },
+    {
+      "order": 2,
+      "title": "Environment Setup",
+      "description": "Installation script for dependencies like Chrome and Gowitness.",
+      "nodeIds": [
+        "file:install.sh"
+      ]
+    },
+    {
+      "order": 3,
+      "title": "Backend Core",
+      "description": "Main Express server and Nmap orchestration logic.",
+      "nodeIds": [
+        "file:server.js"
+      ]
+    },
+    {
+      "order": 4,
+      "title": "Nmap Orchestration",
+      "description": "How the server executes and manages Nmap scan processes.",
+      "nodeIds": [
+        "function:server.js:runNmap"
+      ]
+    },
+    {
+      "order": 5,
+      "title": "Data Parsing",
+      "description": "Converting Nmap XML output into usable vulnerability and host data.",
+      "nodeIds": [
+        "function:server.js:parseNmapXML"
+      ]
+    },
+    {
+      "order": 6,
+      "title": "Frontend Entry",
+      "description": "Main UI structure for the single-page application.",
+      "nodeIds": [
+        "file:index.html"
+      ]
+    },
+    {
+      "order": 7,
+      "title": "Real-time Scanning",
+      "description": "Frontend engine for live scan visualization and table updates.",
+      "nodeIds": [
+        "file:static/js/scan_runtime.js"
+      ]
+    },
+    {
+      "order": 8,
+      "title": "Google Drive Integration",
+      "description": "Python helper for cloud report storage and OAuth2.",
+      "nodeIds": [
+        "file:google_drive.py"
+      ]
+    },
+    {
+      "order": 9,
+      "title": "Report Styling",
+      "description": "XSLT stylesheet for generating modern HTML reports from scan data.",
+      "nodeIds": [
+        "config:nmap-modern.xsl"
+      ]
+    }
+  ]
+}

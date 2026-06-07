@@ -1,0 +1,184 @@
+{
+  "scriptCompleted": true,
+  "files": [
+    {
+      "path": ".understand-anything/.understandignore",
+      "language": "unknown",
+      "sizeLines": 30,
+      "fileCategory": "code"
+    },
+    {
+      "path": "google_drive.py",
+      "language": "python",
+      "sizeLines": 724,
+      "fileCategory": "code"
+    },
+    {
+      "path": "index.html",
+      "language": "html",
+      "sizeLines": 1857,
+      "fileCategory": "markup"
+    },
+    {
+      "path": "install.sh",
+      "language": "shell",
+      "sizeLines": 219,
+      "fileCategory": "script"
+    },
+    {
+      "path": "nmap-modern.xsl",
+      "language": "xml",
+      "sizeLines": 2251,
+      "fileCategory": "config"
+    },
+    {
+      "path": "nmap.sh",
+      "language": "shell",
+      "sizeLines": 15,
+      "fileCategory": "script"
+    },
+    {
+      "path": "package.json",
+      "language": "json",
+      "sizeLines": 17,
+      "fileCategory": "config"
+    },
+    {
+      "path": "phase2_no_script.xml",
+      "language": "xml",
+      "sizeLines": 1200,
+      "fileCategory": "config"
+    },
+    {
+      "path": "phase2_vulners.xml",
+      "language": "xml",
+      "sizeLines": 1990,
+      "fileCategory": "config"
+    },
+    {
+      "path": "README.md",
+      "language": "markdown",
+      "sizeLines": 89,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "scripts/ensure-dependencies.js",
+      "language": "javascript",
+      "sizeLines": 63,
+      "fileCategory": "code"
+    },
+    {
+      "path": "server.js",
+      "language": "javascript",
+      "sizeLines": 1717,
+      "fileCategory": "code"
+    },
+    {
+      "path": "static/js/app_bootstrap.js",
+      "language": "javascript",
+      "sizeLines": 66,
+      "fileCategory": "code"
+    },
+    {
+      "path": "static/js/asset_details_modal.js",
+      "language": "javascript",
+      "sizeLines": 0,
+      "fileCategory": "code"
+    },
+    {
+      "path": "static/js/auto_scan_ui.js",
+      "language": "javascript",
+      "sizeLines": 48,
+      "fileCategory": "code"
+    },
+    {
+      "path": "static/js/auto_update_banner.js",
+      "language": "javascript",
+      "sizeLines": 0,
+      "fileCategory": "code"
+    },
+    {
+      "path": "static/js/customer_ui.js",
+      "language": "javascript",
+      "sizeLines": 206,
+      "fileCategory": "code"
+    },
+    {
+      "path": "static/js/report_generation_ui.js",
+      "language": "javascript",
+      "sizeLines": 0,
+      "fileCategory": "code"
+    },
+    {
+      "path": "static/js/report_status.js",
+      "language": "javascript",
+      "sizeLines": 0,
+      "fileCategory": "code"
+    },
+    {
+      "path": "static/js/reports_tab.js",
+      "language": "javascript",
+      "sizeLines": 0,
+      "fileCategory": "code"
+    },
+    {
+      "path": "static/js/scan_banners.js",
+      "language": "javascript",
+      "sizeLines": 0,
+      "fileCategory": "code"
+    },
+    {
+      "path": "static/js/scan_runtime.js",
+      "language": "javascript",
+      "sizeLines": 642,
+      "fileCategory": "code"
+    },
+    {
+      "path": "static/js/settings_tab.js",
+      "language": "javascript",
+      "sizeLines": 238,
+      "fileCategory": "code"
+    },
+    {
+      "path": "static/js/site_chrome.js",
+      "language": "javascript",
+      "sizeLines": 190,
+      "fileCategory": "code"
+    },
+    {
+      "path": "static/js/table_sorter.js",
+      "language": "javascript",
+      "sizeLines": 0,
+      "fileCategory": "code"
+    },
+    {
+      "path": "static/js/update_modal.js",
+      "language": "javascript",
+      "sizeLines": 0,
+      "fileCategory": "code"
+    }
+  ],
+  "totalFiles": 26,
+  "filteredByIgnore": 0,
+  "estimatedComplexity": "small",
+  "stats": {
+    "filesScanned": 26,
+    "byCategory": {
+      "code": 18,
+      "markup": 1,
+      "script": 2,
+      "config": 4,
+      "docs": 1
+    },
+    "byLanguage": {
+      "unknown": 1,
+      "python": 1,
+      "html": 1,
+      "shell": 2,
+      "xml": 3,
+      "json": 1,
+      "markdown": 1,
+      "javascript": 16
+    }
+  }
+}

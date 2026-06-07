@@ -1,0 +1,17 @@
+node_modules
+npm-debug.log
+reports_archive/*
+!reports_archive/.gitkeep
+history.json
+config.json
+.git
+.gitignore
+Dockerfile
+docker-compose.yml
+.understand-anything
+.understandignore
+knowledge-graph.json
+meta.json
+# Ignore large XML samples if they aren't needed for runtime
+phase2_no_script.xml
+phase2_vulners.xml
