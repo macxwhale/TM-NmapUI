@@ -53,7 +53,7 @@ If you already have a service running on port 9000, you can change the port in `
 ### Permission issues
 Nmap often requires root privileges. The container runs as root by default and uses `privileged: true` to handle this.
 
-## Stopping the application
+## Stopping the application.
 
 To stop and remove the container:
 
