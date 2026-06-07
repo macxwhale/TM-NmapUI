@@ -17,17 +17,22 @@ RUN apt-get update && apt-get install -y \
     python3-cryptography \
     chromium \
     wkhtmltopdf \
-    golang \
     git \
+    curl \
+    ca-certificates \
     && rm -rf /var/lib/apt/lists/*
 
-# Install gowitness via Go
-RUN go install github.com/sensepost/gowitness@latest
-ENV PATH="/root/go/bin:${PATH}"
+# Install gowitness via direct binary download (faster and more reliable than building)
+RUN ARCH=$(uname -m) && \
+    if [ "$ARCH" = "x86_64" ]; then GOWIT_ARCH="amd64"; \
+    elif [ "$ARCH" = "aarch64" ]; then GOWIT_ARCH="arm64"; \
+    else GOWIT_ARCH="arm"; fi && \
+    curl -L -o /usr/local/bin/gowitness "https://github.com/sensepost/gowitness/releases/download/3.1.1/gowitness-3.1.1-linux-$GOWIT_ARCH" && \
+    chmod +x /usr/local/bin/gowitness
 
 # Set environment variables for tool paths
 ENV CHROME_PATH=/usr/bin/chromium
-ENV GOWITNESS_PATH=/root/go/bin/gowitness
+ENV GOWITNESS_PATH=/usr/local/bin/gowitness
 
 # Create and set working directory
 WORKDIR /app

@@ -18,5 +18,5 @@ services:
     environment:
       - NODE_ENV=production
       - CHROME_PATH=/usr/bin/chromium
-      - GOWITNESS_PATH=/root/go/bin/gowitness
+      - GOWITNESS_PATH=/usr/local/bin/gowitness
     restart: unless-stopped
